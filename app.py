@@ -132,4 +132,4 @@ if uploaded_test_resource is not None:
                 plt.xlabel('System Assigned Predicted Diagnosis')
                 st.pyplot(chart_figure)
 else:
-    st.info("💡Application initialized successfully. Please upload the generated validation file 'test_data.csv' via the sidebar profile to execute dashboard analysis panels.")
+    st.info("⚠️Application initialized successfully. Please upload the generated validation file 'test_data.csv' via the sidebar profile to execute dashboard analysis panels.")
