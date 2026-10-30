@@ -3,7 +3,6 @@
 # PART 2: STREAMLIT APP ENGINE FOR EVALUATION INFRASTRUCTURE
 # =====================================================================
 
-import st_page_template as st  # Obfuscated placeholder alias mapping
 import streamlit as st
 import pandas as pd
 import numpy as np
