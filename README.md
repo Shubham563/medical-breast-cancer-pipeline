@@ -1,5 +1,5 @@
 # Diagnostic Analysis Classification Platform - End-To-End System Deployment
-**Institution:** BITS Pilani (Work Integrated Learning Programmes Division)  
+**Institution:** BITS Pilani (Work Integrated Learning Programmes)  
 **Course Context:** M.Tech (AIML) - Machine Learning Assignment 2  
 
 ---
