@@ -19,7 +19,7 @@ st.set_page_config(page_title="BITS WILP ML Diagnostic Platform", layout="wide",
 
 # UI Headers
 st.title("🔬 Intelligent On-Demand Diagnosis Classification Hub")
-st.caption("Developed for Work Integrated Learning Programmes (WILP) | M.Tech AIML")
+st.caption("Developed by Shubham Maurya for Work Integrated Learning Programmes (WILP) | M.Tech AIML")
 st.write("---")
 
 # Sidebar Data Controllers
@@ -27,13 +27,13 @@ st.sidebar.header("📁 Processing Controls panel")
 
 # Target Data Ingestion Interface
 uploaded_test_resource = st.sidebar.file_uploader(
-    "Ingest Target Test Frame File (.CSV)", type=["csv"], 
+    "Ingest Target Test Data File (.CSV)", type=["csv"], 
     help="Upload the 'test_data.csv' containing identical features and targets."
 )
 
 # Target Engine Selector Dropdown
 selected_classifier_label = st.sidebar.selectbox(
-    "Select Target Inference Classifier Pipeline",
+    "Select Target Model Inference Classifier Pipeline",
     ["Logistic Regression", "Decision Tree", "KNN", "Naive Bayes", "Support Vector Machine"]
 )
 
@@ -132,4 +132,4 @@ if uploaded_test_resource is not None:
                 plt.xlabel('System Assigned Predicted Diagnosis')
                 st.pyplot(chart_figure)
 else:
-    st.info("💡 Ingestion Pipeline Idle. Please upload the generated validation file 'test_data.csv' via the sidebar profile to execute dashboard analysis panels.")
+    st.info("💡Application initialized successfully. Please upload the generated validation file 'test_data.csv' via the sidebar profile to execute dashboard analysis panels.")
