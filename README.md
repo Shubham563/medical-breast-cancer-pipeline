@@ -11,7 +11,7 @@ The objective of this project is to implement an end-to-end predictive diagnosti
 This application uses structural observations from the clinical Breast Cancer Wisconsin (Diagnostic) Dataset. The analysis evaluates a high-dimensional feature domain consisting of 30 continuous spatial feature columns computed across individual observations. This comprehensive evaluation captures perimeter contours, average tissue area textures, maximum concave dimensions, and boundary radius distributions across more than 500 instances to optimize diagnostic prediction boundaries.
 
 ### c. Project Repository URL
-[Insert Working Clickable Link to Your Repository Here]
+https://github.com/Shubham563/medical-breast-cancer-pipeline
 
 ### d. Model Performance Matrix Evaluation
 
