@@ -4,16 +4,15 @@
 
 ---
 
-### a. Problem Statement
+### A. Problem Statement
 The objective of this project is to implement an end-to-end predictive diagnostic framework that evaluates morphological cell nuclei features to classify tumor cases as either Malignant or Benign. The core machine learning engine evaluates 5 foundational classifiers across 6 distinct validation dimensions to pinpoint the optimal production model node for real-time web cloud deployment.
 
-### b. Dataset Description
+### B. Dataset Description
 This application uses structural observations from the clinical Breast Cancer Wisconsin (Diagnostic) Dataset. The analysis evaluates a high-dimensional feature domain consisting of 30 continuous spatial feature columns computed across individual observations. This comprehensive evaluation captures perimeter contours, average tissue area textures, maximum concave dimensions, and boundary radius distributions across more than 500 instances to optimize diagnostic prediction boundaries.
 
-### c. Project Repository URL
-https://github.com/Shubham563/medical-breast-cancer-pipeline
+### C. Project Repository URL: https://github.com/Shubham563/medical-breast-cancer-pipeline
 
-### d. Model Performance Matrix Evaluation
+### D. Model Performance Matrix Evaluation
 
 | ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -23,7 +22,7 @@ https://github.com/Shubham563/medical-breast-cancer-pipeline
 | **Naive Bayes** | 0.9386 | 0.9861 | 0.9487 | 0.8810 | 0.9136 | 0.8655 |
 | **Support Vector Machine** | 0.9737 | 0.9974 | 1.0000 | 0.9286 | 0.9630 | 0.9423 |
 
-### e. Qualitative Diagnostic Performance Observations
+### E. Qualitative Diagnostic Performance Observations
 
 | ML Model Name | Observation about model performance |
 | :--- | :--- |
