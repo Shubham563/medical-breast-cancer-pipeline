@@ -1,34 +1,41 @@
 # Diagnostic Analysis Classification Platform - End-To-End System Deployment
-**Institution:** BITS Pilani (Work Integrated Learning Programmes)  
+**Institution:** BITS Pilani (Work Integrated Learning Programmes Division)  
 **Course Context:** M.Tech (AIML) - Machine Learning Assignment 2  
+**Deployment Platform:** Streamlit Community Cloud  
 
 ---
 
-### A. Problem Statement
-The objective of this project is to implement an end-to-end predictive diagnostic framework that evaluates morphological cell nuclei features to classify tumor cases as either Malignant or Benign. The core machine learning engine evaluates 5 foundational classifiers across 6 distinct validation dimensions to pinpoint the optimal production model node for real-time web cloud deployment.
+### a. Problem Statement
+The objective of this assignment is to develop an automated diagnostic classification system capable of analyzing structural multi-dimensional nuclear features of breast mass cells to determine if a tissue sample is **Malignant** or **Benign**. This solution implements and evaluates five separate foundational machine learning algorithms. By analyzing their outputs across six distinct evaluation metrics, we can identify the optimal pipeline node to deploy for live web-based testing.
 
-### B. Dataset Description
-This application uses structural observations from the clinical Breast Cancer Wisconsin (Diagnostic) Dataset. The analysis evaluates a high-dimensional feature domain consisting of 30 continuous spatial feature columns computed across individual observations. This comprehensive evaluation captures perimeter contours, average tissue area textures, maximum concave dimensions, and boundary radius distributions across more than 500 instances to optimize diagnostic prediction boundaries.
+### b. Dataset Description
+The machine learning pipeline utilizes clinical feature data from the **Breast Cancer Wisconsin (Diagnostic) Dataset**. The dataset satisfies all mandatory rubric constraints:
+* **Total Samples:** 569 instances (Assignment Metric Limit: ≥ 500 instances).
+* **Total Active Features:** 30 continuous real-valued geometric parameter attributes (Assignment Metric Limit: ≥ 12 features).
+* **Target Dimension:** Binary classification target vector (`diagnosis`), where **Malignant** matches to **1** and **Benign** maps to **0**.
+* **Measured Parameters:** Calculated dimensional properties of cell nuclei including area error bounds, perimeter averages, worst range attributes, smoothness indices, and maximum concavity points.
 
-### C. Project Repository URL: https://github.com/Shubham563/medical-breast-cancer-pipeline
+### c. Project GitHub Repository Link: https://github.com/Shubham563/medical-breast-cancer-pipeline
 
-### D. Model Performance Matrix Evaluation
+### d. Model Performance Matrix Evaluation
+The following quantitative matrix demonstrates the exact performance scores achieved by the serialized predictive model binary artifacts on the stratified 20% test partition data match:
 
 | ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Logistic Regression** | 0.9825 | 0.9980 | 1.0000 | 0.9524 | 0.9756 | 0.9615 |
-| **Decision Tree** | 0.9298 | 0.9254 | 0.9091 | 0.9048 | 0.9070 | 0.8507 |
-| **KNN** | 0.9649 | 0.9854 | 0.9756 | 0.9286 | 0.9512 | 0.9229 |
-| **Naive Bayes** | 0.9386 | 0.9861 | 0.9487 | 0.8810 | 0.9136 | 0.8655 |
-| **Support Vector Machine** | 0.9737 | 0.9974 | 1.0000 | 0.9286 | 0.9630 | 0.9423 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Logistic Regression** | **0.9649** | 0.9917 | 0.9750 | 0.9286 | 0.9512 | **0.9245** |
+| **Decision Tree** | 0.8860 | 0.8887 | 0.8372 | 0.8571 | 0.8471 | 0.7563 |
+| **KNN** | 0.9474 | 0.9798 | 0.9737 | 0.8810 | 0.9250 | 0.8872 |
+| **Naive Bayes** | 0.9386 | 0.9848 | 0.9487 | 0.8810 | 0.9136 | 0.8675 |
+| **Support Vector Machine** | 0.9474 | **0.9954** | 0.9286 | 0.9286 | 0.9286 | 0.8869 |
 
-### E. Qualitative Diagnostic Performance Observations
+### e. Qualitative Diagnostic Performance Observations
 
 | ML Model Name | Observation about model performance |
 | :--- | :--- |
-| **Logistic Regression** | Achieves outstanding linear separation. Regularized logistic optimization maps variance efficiently across scaled variables, delivering premium reliability with zero false positives. |
-| **Decision Tree** | Exhibits clear structural step-variance. Tends to overfit along deeper coordinate branches, causing small generalization drops on cross-validation tests. |
-| **KNN** | Offers robust boundary clusters but depends heavily on continuous scalar ranges, showing moderate sensitivity to density variations across features. |
-| **Naive Bayes** | Runs smoothly with minimal computing power. However, it assumes zero correlation between parameters, which slightly impacts performance on tightly linked metrics like area and perimeter. |
-| **Support Vector Machine** | Excels at high-dimensional boundary optimization using RBF kernel expansions, matching the precision profiles of linear classifiers. |
-| **Overall Winner?** | **Logistic Regression** is chosen as the champion architecture for this deployment, leading with peak balanced performance across F1-Score (97.56%) and an MCC metric of 0.9615. |
+| **Logistic Regression** | **Overall Winner.** Standardizing the features allows the solver to find a highly effective linear hyperplane. It achieves the best balance across Accuracy (96.49%), F1-Score (95.12%), and MCC (0.9245), indicating a reliable model with very low error margins. |
+| **Decision Tree** | Suffers from noticeable variance drops. Limiting the tree depth helped control overfitting, but it still struggled with the dense, continuous ranges of the 30 descriptive columns, resulting in the lowest overall metrics. |
+| **KNN** | Shows good local boundary classification. However, because it relies on standard coordinate distances, its performance is sensitive to density variations in high-dimensional feature distributions. |
+| **Naive Bayes** | Executes with minimal computational overhead. Its accuracy is slightly restricted by the assumption that all features are independent, which doesn't fully hold true for closely related spatial metrics like area, perimeter, and radius. |
+| **Support Vector Machine** | Excels at high-dimensional border optimization using RBF kernel expansions. It recorded the highest area under the curve score (**AUC: 0.9954**), demonstrating strong confidence in separating the two classes. |
+
+---
